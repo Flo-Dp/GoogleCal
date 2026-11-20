@@ -10,7 +10,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.StrUtils,
   System.IOUtils, System.Classes, System.UITypes,
-  VCL.Graphics, VCL.Controls, VCL.Forms, VCL.StdCtrls,
+  VCL.Graphics, VCL.Dialogs, VCL.Controls, VCL.Forms, VCL.StdCtrls,
   GoogleAuth, GoogleCalendar;
 
 type
