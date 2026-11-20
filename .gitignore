@@ -1,0 +1,10 @@
+*.dcu
+*.local
+*.identcache
+*.projdata
+*.tvssettings
+*.dsk
+*.~*
+bin/
+lib/
+GoogleCal.token.json
