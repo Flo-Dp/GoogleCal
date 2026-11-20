@@ -214,14 +214,14 @@ end;
 
 function TGoogleCalendrier.SupprimerCalendrier(const AId: string): Boolean;
 begin
-  Requete(rmDELETE, 'calendars/' + TNetEncoding.URL.EncodePathSegment(AId));
+  Requete(rmDELETE, 'calendars/' + TNetEncoding.URL.Encode(AId));
   Result := FDerniereErreur = '';
 end;
 
 function TGoogleCalendrier.RetirerDeLaListe(const AId: string): Boolean;
 begin
   Requete(rmDELETE, 'users/me/calendarList/' +
-    TNetEncoding.URL.EncodePathSegment(AId));
+    TNetEncoding.URL.Encode(AId));
   Result := FDerniereErreur = '';
 end;
 
