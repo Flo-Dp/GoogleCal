@@ -12,7 +12,7 @@ interface
 
 uses
   System.SysUtils, System.StrUtils, System.JSON, System.NetEncoding,
-  REST.Types, GoogleAuth;
+  REST.Types, REST.Client, GoogleAuth;
 
 type
   TInfoCalendrier = record
