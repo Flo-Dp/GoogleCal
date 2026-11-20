@@ -1,4 +1,4 @@
-unit FormAgenda;
+unit Agenda;
 
 { Fiche de démonstration : connexion à Google, liste des calendriers,
   suppression d'un calendrier.

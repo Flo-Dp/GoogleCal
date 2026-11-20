@@ -12,7 +12,7 @@ Aucune dépendance externe : uniquement les bibliothèques livrées avec Delphi
 | `GoogleCal.dpr` | Projet Delphi |
 | `src/GoogleAuth.pas` | OAuth 2.0 de bureau : navigateur par défaut + serveur de rebouclage local (127.0.0.1), échange et rafraîchissement des tokens, cache JSON |
 | `src/GoogleCalendar.pas` | API Calendar v3 : lister, trouver, supprimer un calendrier |
-| `src/FormAgenda.pas` / `.dfm` | Fiche de démonstration (connexion / liste / suppression) |
+| `src/Agenda.pas` / `FormAgenda.dfm` | Fiche de démonstration (connexion / liste / suppression) |
 
 ## Configuration (une seule fois)
 
@@ -22,7 +22,7 @@ Aucune dépendance externe : uniquement les bibliothèques livrées avec Delphi
 3. **Identifiants → Créer des identifiants → ID client OAuth → Application de bureau**.
 4. Sur ce client OAuth, ajouter l'URI de redirection autorisée :
    **`http://localhost:8099/`**
-5. Renseigner `CLIENT_ID` et `CLIENT_SECRET` dans `src/FormAgenda.pas`.
+5. Renseigner `CLIENT_ID` et `CLIENT_SECRET` dans `src/Agenda.pas`.
 
 ## Compiler et lancer
 

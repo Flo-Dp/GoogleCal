@@ -2,7 +2,7 @@ program GoogleCal;
 
 uses
   VCL.Forms,
-  FormAgenda in 'src\FormAgenda.pas' {FormAgenda},
+  Agenda in 'src\Agenda.pas' {FormAgenda},
   GoogleAuth in 'src\GoogleAuth.pas',
   GoogleCalendar in 'src\GoogleCalendar.pas';
 
