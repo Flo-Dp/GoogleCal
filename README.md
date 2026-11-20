@@ -43,6 +43,21 @@ Aucune dépendance externe : uniquement les bibliothèques livrées avec Delphi
 - Un calendrier **partagé** se retire seulement de votre liste
   (`calendarList.delete`) : le propriétaire le conserve.
 
+## Dépannage
+
+**Erreur 400 : `redirect_uri_mismatch`** (page « Accès bloqué » chez Google) :
+l'URI de redirection envoyée par l'application ne correspond pas à celle
+enregistrée dans la Console.
+
+1. Console Google Cloud → **API et services → Identifiants** → votre
+   **ID client OAuth** (Application de bureau) → Modifier.
+2. Dans **« URI de redirection autorisés »**, ajoutez exactement :
+   `http://localhost:8099/` (avec le `/` final ; `localhost`, pas `127.0.0.1`).
+3. Enregistrer. La prise en compte est quasi immédiate (compter quelques
+   minutes dans de rares cas).
+4. Si vous avez changé le port, mettez aussi `URI_REDIRECTION` dans
+   `src/Agenda.pas` en cohérence.
+
 ## Notes de sécurité
 
 - Le fichier `GoogleCal.token.json` contient des tokens actifs : ne pas le

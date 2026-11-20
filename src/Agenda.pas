@@ -40,8 +40,12 @@ implementation
 {$R *.dfm}
 
 const
-  CLIENT_ID     = 'VOTRE_CLIENT_ID.apps.googleusercontent.com';
-  CLIENT_SECRET = 'VOTRE_CLIENT_SECRET';
+  CLIENT_ID       = 'VOTRE_CLIENT_ID.apps.googleusercontent.com';
+  CLIENT_SECRET   = 'VOTRE_CLIENT_SECRET';
+  // Doit figurer EXACTEMENT dans la Console Google Cloud > Identifiants >
+  // ID client OAuth > "URI de redirection autorisés" (sinon erreur 400
+  // redirect_uri_mismatch).
+  URI_REDIRECTION = 'http://localhost:8099/';
 
 function TFormAgenda.FichierJeton: string;
 begin
@@ -50,7 +54,7 @@ end;
 
 procedure TFormAgenda.FormCreate(Sender: TObject);
 begin
-  FAuth := TGoogleAuth.Create(CLIENT_ID, CLIENT_SECRET);
+  FAuth := TGoogleAuth.Create(CLIENT_ID, CLIENT_SECRET, URI_REDIRECTION);
   FAuth.ChargerDepuisFichier(FichierJeton);
   FCal := TGoogleCalendrier.Create(FAuth);
   btnLister.Enabled := False;
